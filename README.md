@@ -1,6 +1,6 @@
 # Trabalho - Raízes do Nordeste
 
-API REST desenvolvida em Spring Boot para o Projeto Multidisciplinar da UNINTER.
+API REST desenvolvida em Spring Boot para o Projeto Multidisciplinar da disciplina Projeto Multidisciplinar Back-End da UNINTER.
 
 ## Tecnologias utilizadas
 
@@ -9,72 +9,90 @@ API REST desenvolvida em Spring Boot para o Projeto Multidisciplinar da UNINTER.
 - Spring Data JPA
 - MySQL
 - Maven
+- Eclipse IDE
+- Postman
 
-## Como executar
+## Como executar o projeto
 
-1. Clone o repositório
+1. Clone este repositório:
 
-```
+```bash
 git clone https://github.com/Tiorikao/Trabalho_Raizes_do_Nordeste.git
 ```
 
-2. Abra o projeto no Eclipse
+2. Abra o projeto no Eclipse.
 
 3. Configure o banco de dados MySQL.
 
-4. Altere o arquivo:
+4. Edite o arquivo:
 
 ```
 src/main/resources/application.properties
 ```
 
-com seu usuário e senha do MySQL.
+com as configurações do seu banco de dados.
 
 Exemplo:
 
-```
-spring.datasource.url=jdbc:mysql://localhost:3306/raizes
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/raizes_nordeste
 spring.datasource.username=root
-spring.datasource.password=suaSenha
+spring.datasource.password=sua_senha
 ```
 
-5. Execute a classe
+5. Execute a classe:
 
 ```
 TarefaapiApplication.java
 ```
 
-6. A API estará disponível em
+6. A aplicação estará disponível em:
 
 ```
 http://localhost:8083
 ```
 
-## Endpoints disponíveis
+## Endpoints da API
 
-### Cliente
+### Clientes
 
-- GET /clientes
-- POST /clientes
-- PUT /clientes/{id}
-- DELETE /clientes/{id}
+| Método | Endpoint |
+|---------|----------|
+| GET | /clientes |
+| POST | /clientes |
+| PUT | /clientes/{id} |
+| DELETE | /clientes/{id} |
 
-### Produto
+### Produtos
 
-- GET /produtos
-- POST /produtos
-- PUT /produtos/{id}
-- DELETE /produtos/{id}
+| Método | Endpoint |
+|---------|----------|
+| GET | /produtos |
+| POST | /produtos |
+| PUT | /produtos/{id} |
+| DELETE | /produtos/{id} |
 
-### Pedido
+### Pedidos
 
-- GET /pedidos
-- POST /pedidos
-- PUT /pedidos/{id}
-- DELETE /pedidos/{id}
+| Método | Endpoint |
+|---------|----------|
+| GET | /pedidos |
+| POST | /pedidos |
+| PUT | /pedidos/{id} |
+| DELETE | /pedidos/{id} |
+
+## Ferramentas utilizadas
+
+- Eclipse IDE
+- Git
+- GitHub
+- Postman
+- MySQL Workbench
 
 ## Autor
 
-Enrique Ferreira Bernardo
+**Enrique Ferreira Bernardo**
 
-Projeto desenvolvido para a disciplina Projeto Multidisciplinar - Back-End - UNINTER.
+RU: **4680241**
+
+Projeto desenvolvido para a disciplina **Projeto Multidisciplinar Back-End - UNINTER**.
