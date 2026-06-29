@@ -221,7 +221,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"statusPagamento\": \"RECUSADO\"\r\n}",
+          "raw": "{\r\n  \"cliente\": \"Enrique\",\r\n  \"produto\": \"Cuscuz Premium\",\r\n  \"quantidade\": 5,\r\n  \"valorTotal\": 92.50,\r\n  \"canalPedido\": \"TOTEM\",\r\n  \"statusPedido\": \"CRIADO\",\r\n  \"statusPagamento\": \"AGUARDANDO_PAGAMENTO\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -229,17 +229,14 @@
           }
         },
         "url": {
-          "raw": "http://localhost:8083/pedidos/9/pagamentos/mock",
+          "raw": "http://localhost:8083/pedidos",
           "protocol": "http",
           "host": [
             "localhost"
           ],
           "port": "8083",
           "path": [
-            "pedidos",
-            "9",
-            "pagamentos",
-            "mock"
+            "pedidos"
           ]
         }
       },
@@ -260,7 +257,7 @@
           }
         },
         "url": {
-          "raw": "http://localhost:8083/pedidos/7/status",
+          "raw": "http://localhost:8083/pedidos/10/status",
           "protocol": "http",
           "host": [
             "localhost"
@@ -268,7 +265,7 @@
           "port": "8083",
           "path": [
             "pedidos",
-            "7",
+            "10",
             "status"
           ]
         }
@@ -299,7 +296,18 @@
       "name": "GET - Rota Inexistente",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8083/rota-inexistente",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8083",
+          "path": [
+            "rota-inexistente"
+          ]
+        }
       },
       "response": []
     },
@@ -340,7 +348,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"statusPagamento\": \"RECUSADO\"\r\n}",
+          "raw": "{\r\n  \"pedidoId\": 10,\r\n  \"statusPagamento\": \"APROVADO\",\r\n  \"statusPedido\": \"PAGO\",\r\n  \"mensagem\": \"Pagamento mock aprovado com sucesso\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -348,7 +356,7 @@
           }
         },
         "url": {
-          "raw": "http://localhost:8083/pedidos/9/pagamentos/mock",
+          "raw": "http://localhost:8083/pedidos/10/pagamentos/mock",
           "protocol": "http",
           "host": [
             "localhost"
@@ -356,7 +364,7 @@
           "port": "8083",
           "path": [
             "pedidos",
-            "9",
+            "10",
             "pagamentos",
             "mock"
           ]
