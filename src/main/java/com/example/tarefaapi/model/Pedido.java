@@ -6,59 +6,69 @@ import jakarta.persistence.*;
 @Table(name = "pedidos")
 public class Pedido {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+private Long id;
 
-    private String cliente;
+private String cliente;
 
-    private String produto;
+private String produto;
 
-    private int quantidade;
+private int quantidade;
 
-    private double valorTotal;
+private double valorTotal;
 
-    public Pedido() {
-    }
+private String canalPedido;
 
-    public Long getId() {
-        return id;
-    }
+public Pedido() {
+}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+public Long getId() {
+    return id;
+}
 
-    public String getCliente() {
-        return cliente;
-    }
+public void setId(Long id) {
+    this.id = id;
+}
 
-    public void setCliente(String cliente) {
-        this.cliente = cliente;
-    }
+public String getCliente() {
+    return cliente;
+}
 
-    public String getProduto() {
-        return produto;
-    }
+public void setCliente(String cliente) {
+    this.cliente = cliente;
+}
 
-    public void setProduto(String produto) {
-        this.produto = produto;
-    }
+public String getProduto() {
+    return produto;
+}
 
-    public int getQuantidade() {
-        return quantidade;
-    }
+public void setProduto(String produto) {
+    this.produto = produto;
+}
 
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
+public int getQuantidade() {
+    return quantidade;
+}
 
-    public double getValorTotal() {
-        return valorTotal;
-    }
+public void setQuantidade(int quantidade) {
+    this.quantidade = quantidade;
+}
 
-    public void setValorTotal(double valorTotal) {
-        this.valorTotal = valorTotal;
-    }
+public double getValorTotal() {
+    return valorTotal;
+}
+
+public void setValorTotal(double valorTotal) {
+    this.valorTotal = valorTotal;
+}
+
+public String getCanalPedido() {
+    return canalPedido;
+}
+
+public void setCanalPedido(String canalPedido) {
+    this.canalPedido = canalPedido;
+}
 
 }
