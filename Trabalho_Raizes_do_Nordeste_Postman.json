@@ -140,6 +140,14 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "GET - Rota Inexistente",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
     }
   ]
 }
