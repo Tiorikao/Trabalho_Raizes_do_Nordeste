@@ -6,69 +6,99 @@ import jakarta.persistence.*;
 @Table(name = "pedidos")
 public class Pedido {
 
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-private String cliente;
+    private String cliente;
 
-private String produto;
+    private String produto;
 
-private int quantidade;
+    private int quantidade;
 
-private double valorTotal;
+    private double valorTotal;
 
-private String canalPedido;
+    private String canalPedido;
 
-public Pedido() {
-}
+    private String statusPedido;
 
-public Long getId() {
-    return id;
-}
+    private String statusPagamento;
 
-public void setId(Long id) {
-    this.id = id;
-}
+    public Pedido() {
+    }
 
-public String getCliente() {
-    return cliente;
-}
+    @PrePersist
+    public void prePersist() {
+        if (statusPedido == null || statusPedido.isBlank()) {
+            statusPedido = "CRIADO";
+        }
 
-public void setCliente(String cliente) {
-    this.cliente = cliente;
-}
+        if (statusPagamento == null || statusPagamento.isBlank()) {
+            statusPagamento = "AGUARDANDO_PAGAMENTO";
+        }
+    }
 
-public String getProduto() {
-    return produto;
-}
+    public Long getId() {
+        return id;
+    }
 
-public void setProduto(String produto) {
-    this.produto = produto;
-}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-public int getQuantidade() {
-    return quantidade;
-}
+    public String getCliente() {
+        return cliente;
+    }
 
-public void setQuantidade(int quantidade) {
-    this.quantidade = quantidade;
-}
+    public void setCliente(String cliente) {
+        this.cliente = cliente;
+    }
 
-public double getValorTotal() {
-    return valorTotal;
-}
+    public String getProduto() {
+        return produto;
+    }
 
-public void setValorTotal(double valorTotal) {
-    this.valorTotal = valorTotal;
-}
+    public void setProduto(String produto) {
+        this.produto = produto;
+    }
 
-public String getCanalPedido() {
-    return canalPedido;
-}
+    public int getQuantidade() {
+        return quantidade;
+    }
 
-public void setCanalPedido(String canalPedido) {
-    this.canalPedido = canalPedido;
-}
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
 
+    public double getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(double valorTotal) {
+        this.valorTotal = valorTotal;
+    }
+
+    public String getCanalPedido() {
+        return canalPedido;
+    }
+
+    public void setCanalPedido(String canalPedido) {
+        this.canalPedido = canalPedido;
+    }
+
+    public String getStatusPedido() {
+        return statusPedido;
+    }
+
+    public void setStatusPedido(String statusPedido) {
+        this.statusPedido = statusPedido;
+    }
+
+    public String getStatusPagamento() {
+        return statusPagamento;
+    }
+
+    public void setStatusPagamento(String statusPagamento) {
+        this.statusPagamento = statusPagamento;
+    }
 }
