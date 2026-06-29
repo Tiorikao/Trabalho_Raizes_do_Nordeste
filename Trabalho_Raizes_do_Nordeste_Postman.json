@@ -119,15 +119,6 @@
           "request": {
             "method": "DELETE",
             "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"nome\": \"Usuario Temporario\",\r\n  \"email\": \"temporario@raizes.com\",\r\n  \"senha\": \"123456\",\r\n  \"role\": \"CLIENTE\"\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
             "url": {
               "raw": "http://localhost:8083/usuarios/2",
               "protocol": "http",
