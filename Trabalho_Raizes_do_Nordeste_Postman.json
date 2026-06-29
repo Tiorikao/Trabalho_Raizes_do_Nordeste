@@ -71,7 +71,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"cliente\": \"Enrique\",\r\n    \"produto\": \"Cuscuz Premium\",\r\n    \"quantidade\": 5,\r\n    \"valorTotal\": 92.50\r\n}",
+          "raw": "{\r\n  \"cliente\": \"Enrique\",\r\n  \"produto\": \"Cuscuz Premium\",\r\n  \"quantidade\": 5,\r\n  \"valorTotal\": 92.50,\r\n  \"canalPedido\": \"TOTEM\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
