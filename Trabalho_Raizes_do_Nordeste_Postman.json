@@ -71,7 +71,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"cliente\": \"Enrique\",\r\n  \"produto\": \"Cuscuz Premium\",\r\n  \"quantidade\": 5,\r\n  \"valorTotal\": 92.50,\r\n  \"canalPedido\": \"TOTEM\"\r\n}",
+          "raw": "{\r\n  \"statusPagamento\": \"RECUSADO\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -79,14 +79,17 @@
           }
         },
         "url": {
-          "raw": "http://localhost:8083/pedidos",
+          "raw": "http://localhost:8083/pedidos/9/pagamentos/mock",
           "protocol": "http",
           "host": [
             "localhost"
           ],
           "port": "8083",
           "path": [
-            "pedidos"
+            "pedidos",
+            "9",
+            "pagamentos",
+            "mock"
           ]
         }
       },
@@ -99,7 +102,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"cliente\": \"Enrique Ferreira\",\r\n  \"produto\": \"Cuscuz Premium Plus\",\r\n  \"quantidade\": 10,\r\n  \"valorTotal\": 185.00\r\n}",
+          "raw": "{\r\n  \"statusPedido\": \"EM_PREPARO\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -107,7 +110,7 @@
           }
         },
         "url": {
-          "raw": "http://localhost:8083/pedidos/4",
+          "raw": "http://localhost:8083/pedidos/7/status",
           "protocol": "http",
           "host": [
             "localhost"
@@ -115,7 +118,8 @@
           "port": "8083",
           "path": [
             "pedidos",
-            "4"
+            "7",
+            "status"
           ]
         }
       },
@@ -146,6 +150,67 @@
       "request": {
         "method": "GET",
         "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "PUT - Atualizar Status do Pedido",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"statusPedido\": \"EM_PREPARO\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8083/pedidos/7/status",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8083",
+          "path": [
+            "pedidos",
+            "7",
+            "status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST - Pagamento Mock",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"statusPagamento\": \"RECUSADO\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8083/pedidos/9/pagamentos/mock",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8083",
+          "path": [
+            "pedidos",
+            "9",
+            "pagamentos",
+            "mock"
+          ]
+        }
       },
       "response": []
     }
