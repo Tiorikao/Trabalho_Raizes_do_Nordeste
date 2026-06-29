@@ -2,6 +2,8 @@
 
 API REST desenvolvida em Spring Boot para o Projeto Multidisciplinar da disciplina Projeto Multidisciplinar Back-End da UNINTER.
 
+O projeto tem como objetivo atender ao cenário da empresa fictícia Raízes do Nordeste, permitindo o gerenciamento básico de clientes, produtos e pedidos por meio de uma API REST com persistência em banco de dados MySQL.
+
 ## Tecnologias utilizadas
 
 - Java 17
@@ -11,6 +13,28 @@ API REST desenvolvida em Spring Boot para o Projeto Multidisciplinar da discipli
 - Maven
 - Eclipse IDE
 - Postman
+- Swagger/OpenAPI
+- Git
+- GitHub
+
+## Funcionalidades implementadas
+
+- Cadastro de clientes
+- Consulta de clientes
+- Atualização de clientes
+- Exclusão de clientes
+- Cadastro de produtos
+- Consulta de produtos
+- Atualização de produtos
+- Exclusão de produtos
+- Cadastro de pedidos
+- Consulta de pedidos
+- Atualização de pedidos
+- Exclusão de pedidos
+- Registro do canal de origem do pedido por meio do campo `canalPedido`
+- Persistência dos dados em banco MySQL
+- Documentação da API com Swagger/OpenAPI
+- Collection do Postman para validação dos endpoints
 
 ## Como executar o projeto
 
@@ -18,81 +42,3 @@ API REST desenvolvida em Spring Boot para o Projeto Multidisciplinar da discipli
 
 ```bash
 git clone https://github.com/Tiorikao/Trabalho_Raizes_do_Nordeste.git
-```
-
-2. Abra o projeto no Eclipse.
-
-3. Configure o banco de dados MySQL.
-
-4. Edite o arquivo:
-
-```
-src/main/resources/application.properties
-```
-
-com as configurações do seu banco de dados.
-
-Exemplo:
-
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/raizes_nordeste
-spring.datasource.username=root
-spring.datasource.password=sua_senha
-```
-
-5. Execute a classe:
-
-```
-TarefaapiApplication.java
-```
-
-6. A aplicação estará disponível em:
-
-```
-http://localhost:8083
-```
-
-## Endpoints da API
-
-### Clientes
-
-| Método | Endpoint |
-|---------|----------|
-| GET | /clientes |
-| POST | /clientes |
-| PUT | /clientes/{id} |
-| DELETE | /clientes/{id} |
-
-### Produtos
-
-| Método | Endpoint |
-|---------|----------|
-| GET | /produtos |
-| POST | /produtos |
-| PUT | /produtos/{id} |
-| DELETE | /produtos/{id} |
-
-### Pedidos
-
-| Método | Endpoint |
-|---------|----------|
-| GET | /pedidos |
-| POST | /pedidos |
-| PUT | /pedidos/{id} |
-| DELETE | /pedidos/{id} |
-
-## Ferramentas utilizadas
-
-- Eclipse IDE
-- Git
-- GitHub
-- Postman
-- MySQL Workbench
-
-## Autor
-
-**Enrique Ferreira Bernardo**
-
-RU: **4680241**
-
-Projeto desenvolvido para a disciplina **Projeto Multidisciplinar Back-End - UNINTER**.
